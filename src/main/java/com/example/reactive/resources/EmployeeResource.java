@@ -35,9 +35,9 @@ public class EmployeeResource {
 
     @PutMapping("/update/{id}")
     public Mono<Employee> update(@RequestBody Employee employee, @PathVariable BigInteger id) {
-        return employeeService.update(employee,id);
+        return employeeService.update(employee, id);
     }
-    
+
     @DeleteMapping("/delete/{id}")
     public Mono<Void> delete(@PathVariable BigInteger id) {
         return employeeService.delete(id);
